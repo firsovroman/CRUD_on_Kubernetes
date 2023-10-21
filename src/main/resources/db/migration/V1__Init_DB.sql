@@ -6,6 +6,7 @@ CREATE SEQUENCE test.user_id_seq
     CACHE 1;
 
 
+
 CREATE TABLE IF NOT EXISTS test.user (
     id BIGINT DEFAULT nextval('test.user_id_seq') PRIMARY KEY,
     first_name varchar(50) not null,
