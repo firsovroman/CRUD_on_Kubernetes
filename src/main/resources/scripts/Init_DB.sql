@@ -1,4 +1,4 @@
-CREATE SEQUENCE test.user_id_seq
+CREATE SEQUENCE user_id_seq
     START 1
     INCREMENT 1
     MAXVALUE 9223372036854775807
@@ -7,10 +7,10 @@ CREATE SEQUENCE test.user_id_seq
 
 
 
-CREATE TABLE IF NOT EXISTS test.user (
-    id BIGINT DEFAULT nextval('test.user_id_seq') PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS user (
+    id BIGINT DEFAULT nextval('user_id_seq') PRIMARY KEY,
     first_name varchar(50) not null,
     last_name VARCHAR(100) not null
     );
 
-INSERT INTO test.user (id, first_name, last_name) VALUES (DEFAULT, 'Stepan', 'Stepanov');
+INSERT INTO user (id, first_name, last_name) VALUES (DEFAULT, 'Stepan', 'Stepanov');
